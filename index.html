@@ -1,60 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animated Login and Registration Form</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- After clicking signup button -->
-  <div class="container">
-    <div class="box signin">
+    <div class="container">
+      <div class="box signin">
         <h2>Already have an account?</h2>
         <button class="signinBtn">Sign In</button>
-    </div>
-      
-<!--        Default loading page with sign in and sign up button  -->
-    <div class="box signup">
+      </div>
+
+      <!--        Default loading page with sign in and sign up button  -->
+      <div class="box signup">
         <h2>Don't have an account?</h2>
         <button class="signupBtn">Sign Up</button>
-  </div>
-  <div class="formBx">
-    <div class="form signinform">
-        <form>
-         <h3>Sign In</h3>   
-         <input type="text" placeholder="Email Address">
-         <input type="password" placeholder="Password">
-         <input type="submit" value="Log In">
-        </form>
+      </div>
+      <div class="formBx">
+        <div class="form signinform">
+          <form>
+            <h3>Sign In</h3>
+            <input type="text" placeholder="Email Address" />
+            <input type="password" placeholder="Password" />
+            <input type="submit" value="Log In" />
+          </form>
+        </div>
+        <!-- end of code for loading page -->
+
+        <!-- After clicking signup button -->
+        <div class="form signupform">
+          <form>
+            <h3>Sign Up</h3>
+            <input type="text" placeholder="Email Address" />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Confirm password" />
+            <input type="submit" value="Register" />
+          </form>
+        </div>
+      </div>
     </div>
-      <!-- end of code for loading page -->
+// *********************************************************************** //
+    <script>
+      // This line of JavaScript code selects the first HTML element
+      // with the class name signinBtn and assigns it to the variable
+      // signinBtn. The document.querySelector method is used to
+      // find the first element within the document that matches
+      // the specified CSS selector. In this case, the selector
+      // is .signinBtn, which targets an element with the class
+      // signinBtn. This is useful for manipulating the element
+      // or attaching event listeners to it in subsequent lines
+      // of code.
 
-      <!-- After clicking signup button -->
-    <div class="form signupform">
-        <form>
-         <h3>Sign Up</h3>   
-         <input type="text" placeholder="Email Address">
-         <input type="password" placeholder="Password">
-         <input type="password" placeholder="Confirm password">
-         <input type="submit" value="Register">
-        </form>
-    </div>
-  </div>
-  </div>
-    
-  <script>
-    let signinBtn = document.querySelector('.signinBtn');
-    let signupBtn = document.querySelector('.signupBtn');
-    let body = document.querySelector('body');
+      let signinBtn = document.querySelector(".signinBtn");
+      let signupBtn = document.querySelector(".signupBtn");
+      let body = document.querySelector("body");
 
-    signupBtn.onclick = function(){
-        body.classList.add('slide');   
-    }
+// *********************************************************************** //
+      // This JavaScript code snippet assigns an anonymous function
+      // to the onclick event handler of the signupBtn element.
+      // When the signupBtn is clicked, this function is executed.
+      // Inside the function, the classList.add('slide') method
+      // is called on the body element. This method adds the
+      // class slide to the list of classes on the body element.
+      // Adding this class can be used to trigger CSS styles or
+      // animations that are defined for elements with the slide
+      // class, effectively changing the appearance or behavior
+      // of the page in response to the click event on signupBtn.
 
-    signinBtn.onclick = function(){
-        body.classList.remove('slide');   
-    }
-  </script>
-</body>
+      signupBtn.onclick = function () {
+        body.classList.add("slide");
+      };
+
+      signinBtn.onclick = function () {
+        body.classList.remove("slide");
+      };
+    </script>
+  </body>
 </html>
